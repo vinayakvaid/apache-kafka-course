@@ -48,6 +48,21 @@ bin/kafka-console-consumer.sh \
 --group test \
 --from-beginning
 
+Reading messages from specific partition :
+bin/kafka-console-consumer.sh \
+  --bootstrap-server localhost:9092 \
+  --topic birds \
+  --partition 2 \
+  --from-beginning
+
+Reading messages from specific offset in specific partition :
+bin/kafka-console-consumer.sh \
+  --bootstrap-server localhost:9092 \
+  --topic birds \
+  --partition 2 \
+  --offset 0
+				
+
 LIST CONSUMER GROUPS
 bin/kafka-consumer-groups.sh \
 --bootstrap-server localhost:9092 \
